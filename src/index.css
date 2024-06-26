@@ -1,0 +1,577 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  height: 100vh;
+}
+.nav-div img{
+  height: 70px;
+  width: 50px;
+  /* animation: updown 1s 0s; */
+}
+.nav-div img:hover{
+  filter: grayscale();
+}
+@keyframes updown {
+  0%{
+    transform: translateY(-100%);
+  }
+  100%{
+    transform: translateY(0%);
+  }
+}
+.nav-div{
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  background-color: #09090ad6;
+  color: white;
+  padding-top: 5px;
+  font-family: "Barlow Condensed", sans-serif;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  cursor: pointer;
+  animation: updown 1.5s;
+}
+.nav-div label{
+  cursor: pointer;
+}
+.nav-div label div{
+  width: 100%;
+  height: 5px;
+  background-color: #f0d20e;
+  transform: translateY(12px);
+  opacity: 0;
+}
+.nav-div label:hover{
+  color: #f0d20e;
+  opacity: 1;
+}
+.nav-menu{
+  animation: leftside .5s 1.2s both; 
+  position: relative;
+}
+@keyframes leftside {
+  0%{
+     left: -10%;
+     opacity: 0;
+  }
+  100%{
+    left: 0;
+    opacity: 1;
+  }
+  
+}
+.nav-menu1{
+  animation: rightside .5s 1.2s both; 
+  position: relative;
+}
+@keyframes rightside {
+  0%{
+     left: 10%;
+     opacity: 0;
+  }
+  100%{
+    left: 0;
+    opacity: 1;
+  }
+  
+}
+.logo{
+  animation: logodown 1s 1s both;
+  position: relative;
+  top: -125%;
+}
+
+
+
+@keyframes logodown {
+  0%{
+   top:-125%
+  }
+  100%{
+    top: 0;
+  }
+  
+}
+.intro{
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+
+}
+.front{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-direction: column;
+  gap: 30px;
+  text-align: center;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  background-image: url(https://www.sliderrevolution.com/wp-content/uploads/revslider/barber-shop-first-screen/barber-shop-main-bg.jpg);
+  animation: scale 1s;
+}
+@keyframes scale {
+  0%{
+    transform: scale(1.2);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+.front h2{
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  letter-spacing: 5px;
+  font-weight: 600;
+  color: rgb(255, 225, 27);
+  animation: cutter 0.5s 1.6s both;
+}
+.front h1{
+  font-size: 48px;
+  font-weight: 400;
+  animation: scaleup 0.5s 1.7s both;
+}
+@keyframes scaleup {
+  0%{
+    transform: scale(0);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+.line{
+  width: 50px;
+  height: 5px;
+  background-color: rgb(255, 225, 27);
+  position: absolute;
+  left: 48%;
+  animation: line 0.5s 1.4s both;
+  transform: translateY(500%);
+}
+@keyframes line {
+  0%{
+    width: 0;
+    opacity: 0;
+  }
+  100%{
+    width: 50px;
+    opacity: 1;
+  }
+}
+.front p{
+  font-size: 21px;
+  font-family: "Nixie One", system-ui;
+  width: 32%;
+  line-height: 30px;
+  animation: upwards 0.5s 1.8s both;
+}
+@keyframes upwards {
+  0%{
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.cutter img{
+  width: 40px;
+  height: 25px;
+  animation: cutter 0.5s 1.4s both;
+}
+@keyframes cutter {
+  0%{
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.rasor{
+  animation: updowns 1s 2s both;
+}
+@keyframes updowns {
+  0%{
+    transform: translateY(500%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.rasor img{
+  width: 18px;
+  height: 30px;
+  animation: rasor 2s 2.1s infinite forwards;
+}
+@keyframes rasor {
+  0%{
+    transform: translateY(50%);
+  }
+  50%{
+    transform: translateY(0%);
+  }
+  100%{
+    transform: translateY(50%);
+  }
+}
+.about{
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
+  height: 140vh;
+  gap: 100px;
+
+}
+.about-img-div{
+height: 100vh;
+width: 120%;
+object-fit: cover;
+}
+.about-img{
+  height: 110vh;
+  animation: image-lr 1s 2.2s both;
+}
+@keyframes image-lr {
+  0%{
+    width: 0;
+  }
+  100%{
+    width: 230%;
+  }
+}
+.about-right{
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  width: 50%;
+  transform: translateX(10%);
+}
+.small-logo{
+  display: none;
+}
+.about-right h3{
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 18px;
+  letter-spacing: 10px;
+  font-weight: 400;
+}
+.about-right h1{
+  font-family: "Ultra", serif;
+  font-weight: 500;
+  font-size: 60px;
+  transform: translateX(-35%);
+  animation: h1anime 1s 2.8s both;
+}
+.headings{
+  font-family: "Ultra", serif;
+  font-weight: 500;
+  /* font-size: 60px; */
+}
+.ultra{
+  font-family: "Ultra", serif;
+}
+.headingss{
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 18px;
+  letter-spacing: 5px;
+  font-weight: 400;
+}
+.headingsss{
+  font-family: "Nixie One", system-ui;
+  font-size: 25px;
+  line-height: 40px;
+  font-weight: 400;
+}
+.anton{
+  font-family: "Anton", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 22px;
+}
+.nexin{
+  font-family: "Nixie One", system-ui;
+}
+.barlow{
+  font-family: "Barlow Condensed", sans-serif;
+}
+@keyframes h1anime {
+  0%{
+    transform: translateX(20%);
+    opacity: 0;
+    filter: blur();
+  }
+  100%{
+    transform: translateX(-25%);
+    opacity: 1;
+  }
+}
+.about-div-line{
+  display: flex;
+  align-items: center;
+  
+}
+@keyframes left-right {
+  0%{
+    width: 0;
+  }
+  100%{
+    width: 80%;
+  }
+}
+.about-line{
+  height: 10px;
+  width: 100%;
+  background-color: #f0d20e;
+  position: absolute;
+  left: 20%;
+  animation: left-right 1s 2.6s both;
+}
+.about-right p{
+  font-family: "Nixie One", system-ui;
+  font-size: 25px;
+  line-height: 40px;
+  animation: about-para 1s 2.8s both;
+}
+@keyframes about-para {
+  0%{
+    transform: translateY(30%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.services{
+  height: 100vh;
+  background-image: url(https://www.sliderrevolution.com/wp-content/uploads/revslider/barber-shop-services/barber-shop-services.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  animation: scale 1s 1.6s;
+}
+.service-head{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* .right-line{
+  height: 8px;
+  width: 40%;
+  background-color: #f0d20e;
+} */
+.service-head label{
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 18px;
+  color: white;
+  letter-spacing: 10px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.services h1{
+  font-family: "Ultra", serif;
+  font-size: 60px;
+  color: white;
+  animation: serviceh1 1s 1.8s both;
+}
+@keyframes serviceh1 {
+  0%{
+    transform: translateY(-40%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.service-para p{
+  font-family: "Nixie One", system-ui;
+  font-size: 25px;
+  line-height: 40px;
+  text-align: center;
+  color: white;
+  width: 53%;
+  margin: auto;
+  animation: about-para 1s 2s both;
+}
+.top-services{
+  display: flex;
+  width: 80%;
+}
+.cart{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+  width: 70%;
+}
+.cart img{
+  width: 100px;
+  height: 100px;
+  animation: scaleup 0.5s 2.2s both;
+}
+.cart h2{
+  font-family: "Anton", sans-serif;
+  font-size: 20px;
+  color: white;
+  font-weight: 400;
+  animation: about-para 1s 2.4s both;
+}
+.cart p{
+  font-family: "Nixie One", system-ui;
+  font-size: 17px;
+  line-height: 20px;
+  text-align: center;
+  color: white;
+  width: 70%;
+  animation: about-para 1s 2.6s both;
+}
+.lb-logo{
+  animation: lb-logo 1s;
+}
+@keyframes lb-logo {
+  0%{
+    transform: translateY(-300%);
+    opacity: 0;
+  }100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.lb-h1{
+  animation: lb-h1 1s 1.2s both;
+}
+@keyframes lb-h1 {
+  0%{
+    transform: translateY(100%);
+    opacity: 0;
+  }100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.lb-p{
+  animation: lb-p 1s 1.4s both;
+}
+@keyframes lb-p {
+  0%{
+    transform: translateY(100%);
+    opacity: 0;
+  }100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.lb-icon{
+  animation: lb-icon 1s 1.8s both;
+}
+@keyframes lb-icon {
+  0%{
+    font-size: 0;
+    opacity: 0;
+  }100%{
+    font-size: 25px;
+    opacity: 1;
+  }
+}
+.linear{
+  background: -webkit-linear-gradient(magenta, purple);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+.ws-shadow{
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+/* ---------------------Responsive------------------- */
+@media (max-width:600px) {
+  .nav-div{
+    display: none;
+  }
+  .small-logo{
+    display: block;
+    position: fixed;
+    height: 8vh;
+    transform: translateX(320%);
+  }
+  .front p{
+    width: 80%;
+  }
+  .front{
+    background-position: center;
+  }
+  .about{
+    height: 70vh;
+  }
+  .about-img{
+    display: none;
+  }
+  .about-line{
+    display: none;
+  }
+  .about{
+    width: 100%;
+    transform: translateX(-10%);
+    height: 80vh;
+  }
+  .about h1{
+    width: 150%;
+    font-size: 35px;
+    text-align: center;
+    /* background-color: red; */
+  }
+  .about p{
+    text-align: center;
+    width: 100%;   
+    font-size: 16px;
+    transform: translateX(-50%);
+  }
+  .about h3{
+    transform: translateX(30%);
+  }
+  .services{
+    height: 200vh;
+    text-align: center;
+  }
+  .service-para{
+    width: 100%;
+  }
+  .top-services{
+    transform: translateX(15%);
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+
+}
